@@ -27,6 +27,6 @@ public class DicasService {
     public double QuantDicas(){
         return rep.count();
     }
-    public long QuantLidas(){ return rep.findQuantLidas(); }
+    public long QuantLidas(Long user){ return rep.findQuantLidas(user); }
 
 }
