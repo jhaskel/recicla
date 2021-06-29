@@ -22,6 +22,7 @@ public class TesteDTO {
     private Long distancia;
     private Double latitude;
     private Double longitude;
+    private Double novo;
 
     public static TesteDTO create(Teste dica) {
         ModelMapper modelMapper = new ModelMapper();

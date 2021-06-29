@@ -30,6 +30,7 @@ public class Teste {
     private Long distancia;
     private Double latitude;
     private Double longitude;
+    private Double novo;
 
 
 }
