@@ -10,6 +10,7 @@ public class Dica {
     @Id //define chave primária
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long icone;
     private String title;
     private String content;
     private String image;

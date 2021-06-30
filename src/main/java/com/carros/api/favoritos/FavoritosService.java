@@ -82,4 +82,7 @@ public class FavoritosService {
     public double getRe(Long usuario, Long icone, Long idevento) {
         return rep.findSoma(usuario,icone,idevento);
     }
+    public double getQuant(Long usuario, Long icone) {
+        return rep.findQuant(usuario,icone);
+    }
 }

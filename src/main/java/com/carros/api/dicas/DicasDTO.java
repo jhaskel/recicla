@@ -7,14 +7,13 @@ import org.modelmapper.ModelMapper;
 
 public class DicasDTO {
     private Long id;
-
+    private Long icone;
     private String title;
     private String content;
     private String image;
     private String created;
     private Boolean ativo;
     private String video;
-
     private String tipo;
     private String credito_midia;
     private String credito_nome;

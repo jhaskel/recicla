@@ -25,6 +25,9 @@ interface FavoritosRepository extends JpaRepository<Favoritos, Long> {
     @Query(value = "select count(id) as quant from favoritos where  ativo = true and usuario = :usuario and icone = :icone and idevento = :idevento", nativeQuery = true)
     double findSoma(Long usuario, Long icone, Long idevento);
 
+    @Query(value = "select count(id) as quant from favoritos where  ativo = true and usuario = :usuario and icone = :icone ", nativeQuery = true)
+    double findQuant(Long usuario, Long icone);
+
 
     @Query(value = "select count(id) from favoritos where  ativo = true and usuario = :usuario and icone = :icone", nativeQuery = true)
     Long findQuantLidas(Long usuario,Long icone);
