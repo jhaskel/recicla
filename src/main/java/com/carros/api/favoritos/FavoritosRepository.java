@@ -4,7 +4,6 @@ package com.carros.api.favoritos;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import java.util.Arrays;
 import java.util.List;
 
 interface FavoritosRepository extends JpaRepository<Favoritos, Long> {
