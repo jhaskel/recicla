@@ -17,7 +17,7 @@ public class ResiduoDTO {
     private String link;
     private Long mes;
     private Double quant;
-    private Double quant2 ;
+    private Double quant2;
 
 
     public static ResiduoDTO create(Residuo residuo) {
