@@ -31,6 +31,6 @@ public class DicasService {
     public double QuantDicas(){
         return rep.count();
     }
-    public long QuantLidas(Long user,String tipo){ return rep.findQuantLidas(user,tipo); }
+    public long QuantLidas(Long user){ return rep.findQuantLidas(user); }
 
 }

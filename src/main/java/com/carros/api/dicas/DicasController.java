@@ -44,9 +44,9 @@ public class DicasController {
         return service.QuantDicas();
     }
 
-    @GetMapping("/quantLidas/{user}/{tipo}")
-    public long QuantLidas(@PathVariable("user") Long user,@PathVariable("user") String tipo) {
-        return service.QuantLidas(user,tipo);
+    @GetMapping("/quantLidas/{user}")
+    public long QuantLidas(@PathVariable("user") Long user) {
+        return service.QuantLidas(user);
     }
 
 

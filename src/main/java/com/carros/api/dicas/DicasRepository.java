@@ -15,6 +15,6 @@ interface DicasRepository extends JpaRepository<Dica, Long> {
 
     @Query(value = "SELECT COUNT(id) AS quant FROM dica \n" +
             "WHERE id NOT IN (SELECT idevento FROM favoritos WHERE tipo = dica AND usuario = :user) ", nativeQuery = true)
-    long findQuantLidas(Long user,String tipo);
+    long findQuantLidas(Long user);
 
 }
