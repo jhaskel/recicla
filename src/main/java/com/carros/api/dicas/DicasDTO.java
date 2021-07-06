@@ -13,7 +13,6 @@ public class DicasDTO {
     private String image;
     private String title;
     private String video;
-    private String tipo;
 
     public static DicasDTO create(Dica dica) {
         ModelMapper modelMapper = new ModelMapper();

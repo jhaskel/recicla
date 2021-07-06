@@ -14,7 +14,7 @@ interface DicasRepository extends JpaRepository<Dica, Long> {
     List<Dica> findCidade(Long cidade);
 
     @Query(value = "SELECT COUNT(id) AS quant FROM dica \n" +
-            "WHERE id NOT IN (SELECT idevento FROM favoritos WHERE tipo = :tipo AND usuario = :user) ", nativeQuery = true)
+            "WHERE id NOT IN (SELECT idevento FROM favoritos WHERE tipo = dicas AND usuario = :user) ", nativeQuery = true)
     long findQuantLidas(Long user,String tipo);
 
 }
