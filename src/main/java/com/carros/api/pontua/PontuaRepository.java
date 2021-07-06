@@ -16,6 +16,6 @@ public interface PontuaRepository extends JpaRepository<Pontua, Long> {
 
 
 
-    @Query(value = "select count(id)  from pontuacao where ano = :ano and mes = :mes and usuario = :usuario and icone = 4", nativeQuery = true)
+    @Query(value = "select count(id)  from pontuacao where ano = :ano and mes = :mes and usuario = :usuario and tipo = 4", nativeQuery = true)
     Long findPontosMes(Long usuario, Long ano, Long mes);
 }

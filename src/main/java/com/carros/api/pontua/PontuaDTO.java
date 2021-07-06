@@ -14,7 +14,7 @@ public class PontuaDTO {
     private Long semana;
     private String hoje;
     private String extrato;
-    private Long icone;
+    private String tipo;
     private Long cidade;
 
 
