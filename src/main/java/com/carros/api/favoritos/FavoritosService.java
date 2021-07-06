@@ -25,8 +25,8 @@ public class FavoritosService {
         return carro.map(FavoritosDTO::create).orElseThrow(() -> new ObjectNotFoundException("Rotas não encontrado"));
     }
 
-    public Long getQuantLidas(Long usuario,Long icone) {
-        return rep.findQuantLidas(usuario,icone);
+    public Long getQuantLidas(Long usuario,String tipo) {
+        return rep.findQuantLidas(usuario,tipo);
     }
 
     public FavoritosDTO insert(Favoritos carro) {
@@ -42,7 +42,6 @@ public class FavoritosService {
         if(optional.isPresent()) {
             Favoritos db = optional.get();
             // Copiar as propriedades
-            db.setAtivo(carro.getAtivo());
             db.setAtivo(carro.getAtivo());
             System.out.println("Rotas id " + db.getId());
 
@@ -62,27 +61,27 @@ public class FavoritosService {
 
 
 
-    public List<FavoritosDTO> getRotasByCidade(Long usuario,Long icone,Long idevento) {
-        return rep.findByCidade(usuario,icone,idevento).stream().map(FavoritosDTO::create).collect(Collectors.toList());
+    public List<FavoritosDTO> getRotasByCidade(Long usuario,String tipo,Long idevento) {
+        return rep.findByCidade(usuario,tipo,idevento).stream().map(FavoritosDTO::create).collect(Collectors.toList());
     }
 
 
-    public List<FavoritosDTO> getRotasByIcone(Long usuario, Long icone) {
-        return rep.findByIcone(usuario,icone).stream().map(FavoritosDTO::create).collect(Collectors.toList());
+    public List<FavoritosDTO> getRotasByIcone(Long usuario, String tipo) {
+        return rep.findByIcone(usuario,tipo).stream().map(FavoritosDTO::create).collect(Collectors.toList());
     }
 
-    public List<FavoritosDTO> getBriqueByIcone(Long usuario, Long icone) {
-        return rep.findByUsuarioIcone(usuario,icone).stream().map(FavoritosDTO::create).collect(Collectors.toList());
+    public List<FavoritosDTO> getBriqueByIcone(Long usuario, String tipo) {
+        return rep.findByUsuarioIcone(usuario,tipo).stream().map(FavoritosDTO::create).collect(Collectors.toList());
     }
 
-    public List<FavoritosDTO> getFavoritosPostarByIcone(Long usuario, Long icone,Long idevento) {
-        return rep.findByFavoritosPostar(usuario,icone,idevento).stream().map(FavoritosDTO::create).collect(Collectors.toList());
+    public List<FavoritosDTO> getFavoritosPostarByIcone(Long usuario, String tipo,Long idevento) {
+        return rep.findByFavoritosPostar(usuario,tipo,idevento).stream().map(FavoritosDTO::create).collect(Collectors.toList());
     }
 
-    public double getRe(Long usuario, Long icone, Long idevento) {
-        return rep.findSoma(usuario,icone,idevento);
+    public double getRe(Long usuario, String tipo, Long idevento) {
+        return rep.findSoma(usuario,tipo,idevento);
     }
-    public double getQuant(Long usuario, Long icone) {
-        return rep.findQuant(usuario,icone);
+    public double getQuant(Long usuario, String tipo) {
+        return rep.findQuant(usuario,tipo);
     }
 }
