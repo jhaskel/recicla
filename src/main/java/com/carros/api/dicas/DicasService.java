@@ -18,6 +18,10 @@ public class DicasService {
         return rep.findAll2().stream().map(DicasDTO::create).collect(Collectors.toList());
     }
 
+    public List<DicasDTO> getCidade(Long cidade) {
+        return rep.findCidade(cidade).stream().map(DicasDTO::create).collect(Collectors.toList());
+    }
+
 
     public DicasDTO getClasseById(Long id) {
         Optional<Dica> classe = rep.findById(id);
@@ -27,6 +31,6 @@ public class DicasService {
     public double QuantDicas(){
         return rep.count();
     }
-    public long QuantLidas(Long user){ return rep.findQuantLidas(user); }
+    public long QuantLidas(Long user,String tipo){ return rep.findQuantLidas(user,tipo); }
 
 }

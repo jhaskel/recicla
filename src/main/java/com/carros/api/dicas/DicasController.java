@@ -24,9 +24,16 @@ public class DicasController {
         return ResponseEntity.ok(dicas);
     }
 
+    @GetMapping("/cidade/{cidade}")
+    public ResponseEntity getCidade(@PathVariable("cidade") Long cidade) {
+        List<DicasDTO> dicas = service.getCidade(cidade);
+        return  ResponseEntity.ok(dicas);
+
+    }
+
 
     @GetMapping("/{id}")
-    public ResponseEntity get(@PathVariable("id") Long id) {
+    public ResponseEntity get2(@PathVariable("id") Long id) {
         DicasDTO dica = service.getClasseById(id);
         return  ResponseEntity.ok(dica);
 
@@ -37,9 +44,9 @@ public class DicasController {
         return service.QuantDicas();
     }
 
-    @GetMapping("/quantLidas/{user}")
-    public long QuantLidas(@PathVariable("user") Long user) {
-        return service.QuantLidas(user);
+    @GetMapping("/quantLidas/{user}/{tipo}")
+    public long QuantLidas(@PathVariable("user") Long user,@PathVariable("user") String tipo) {
+        return service.QuantLidas(user,tipo);
     }
 
 

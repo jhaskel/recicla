@@ -10,8 +10,11 @@ interface DicasRepository extends JpaRepository<Dica, Long> {
     @Query(value = "select * from dica  order by id desc", nativeQuery = true)
     List<Dica> findAll2();
 
+    @Query(value = "select * from dica where cidade = :cidade  order by id desc", nativeQuery = true)
+    List<Dica> findCidade(Long cidade);
+
     @Query(value = "SELECT COUNT(id) AS quant FROM dica \n" +
-            "WHERE id NOT IN (SELECT idevento FROM favoritos WHERE icone = 3 AND usuario = :user) ", nativeQuery = true)
-    long findQuantLidas(Long user);
+            "WHERE id NOT IN (SELECT idevento FROM favoritos WHERE tipo = :tipo AND usuario = :user) ", nativeQuery = true)
+    long findQuantLidas(Long user,String tipo);
 
 }

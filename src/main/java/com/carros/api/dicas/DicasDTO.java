@@ -7,12 +7,13 @@ import org.modelmapper.ModelMapper;
 
 public class DicasDTO {
     private Long id;
+    private Long cidade;
     private Boolean ativo;
     private String content;
     private String image;
     private String title;
     private String video;
-    private Long icone;
+    private String tipo;
 
     public static DicasDTO create(Dica dica) {
         ModelMapper modelMapper = new ModelMapper();
