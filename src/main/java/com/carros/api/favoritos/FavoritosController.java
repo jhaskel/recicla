@@ -39,7 +39,7 @@ public class FavoritosController {
 
     //verifica se tem favorito em postagem
     @GetMapping("/soma/{usuario}/{tipo}/{idevento}")
-    public double getRe(@PathVariable("usuario") Long usuario,@PathVariable("icone") String tipo,@PathVariable("idevento") Long idevento) {
+    public double getRe(@PathVariable("usuario") Long usuario,@PathVariable("tipo") String tipo,@PathVariable("idevento") Long idevento) {
         return service.getRe(usuario,tipo,idevento);
     }
 
