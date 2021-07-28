@@ -7,11 +7,12 @@ import org.modelmapper.ModelMapper;
 public class CidadeDTO {
     private Long id;
     private String nome;
-    private String img;
     private double latitude;
     private double longitude;
     private double gasto_anual;
+    private Double lixo;
     private Long habitantes;
+    private Long codigo;
     private String icone;
     private String imagem;
     private Long ativo;
