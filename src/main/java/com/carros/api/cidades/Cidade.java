@@ -19,6 +19,7 @@ public class Cidade {
     private Double longitude;
     private Double gasto_anual;
     private Double lixo;
+    private Double recicldo;
     private Long habitantes;
     private Long codigo;
     private String icone;
