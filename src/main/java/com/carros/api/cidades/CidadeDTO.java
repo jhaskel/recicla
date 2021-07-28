@@ -11,7 +11,7 @@ public class CidadeDTO {
     private Double longitude;
     private Double gasto_anual;
     private Double lixo;
-    private Double recicldo;
+    private Double reciclado;
     private Long habitantes;
     private Long codigo;
     private String icone;
