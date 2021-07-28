@@ -21,6 +21,7 @@ public class Cidade {
     private double gasto_anual;
     private Long habitantes;
     private String icone;
+    private String imagem;
     private Long ativo;
     private Long cidade;
     private Long regiao;

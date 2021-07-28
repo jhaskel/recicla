@@ -37,6 +37,8 @@ public class PontuaController {
 
 
 
+
+
     //verifica se o usuario ja fez brique no mes
     @GetMapping("/brique/{usuario}/{ano}/{mes}")
     public Long getPontosMes(@PathVariable("usuario") Long usuario,@PathVariable("ano") Long ano,@PathVariable("mes") Long mes) {
