@@ -10,7 +10,6 @@ public class LogisticaTipoDTO {
     private String nome;
     private Long pontos;
     private String content;
-
     private String icone;
 
 
