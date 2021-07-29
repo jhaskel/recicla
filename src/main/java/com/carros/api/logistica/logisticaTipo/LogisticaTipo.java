@@ -15,8 +15,6 @@ public class LogisticaTipo {
     private Long id;
     private String nome;
     private Long pontos;
-    private Long cormapa;
-    private String corhexa;
     private String icone;
     private String content;
 

@@ -9,9 +9,8 @@ public class LogisticaTipoDTO {
     private Long id;
     private String nome;
     private Long pontos;
+    private String content;
 
-    private String content;private Long cormapa;
-    private String corhexa;
     private String icone;
 
 
