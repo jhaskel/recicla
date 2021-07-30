@@ -6,24 +6,15 @@ import org.modelmapper.ModelMapper;
 @Data
 public class QrcodeDTO {
     private Long id;
-    private Long usuario;
-    private Long cidade;
-    private Boolean ativo;
-    private Long ecoins;
-    private Long pontos;
-    private Long idloja;
-    private String tipo;
-    private String tipocupom;
-    private String titulo;
-    private String observacao;
-    private String produtos;
-    private String horario;
-    private String date;
-    private String nomeloja;
-    private String codigo;
     private String qrcode;
-    private String imagem;
+    private Long cidade;
+    private String tipo;
+    private String tipotipo;
+    private String codigo;
+    private Long idloja;
     private Long valor;
+    private Boolean ativo;
+
 
     public static QrcodeDTO create(Qrcode cupons) {
         ModelMapper modelMapper = new ModelMapper();
