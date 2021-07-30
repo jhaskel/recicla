@@ -34,8 +34,8 @@ public class QrcodeService {
 
 
 
-    public List<QrcodeDTO> getExtratoByCodigo(String codigo) {
-        return rep.findExtratoByCodigo(codigo).stream().map(QrcodeDTO::create).collect(Collectors.toList());
+    public List<QrcodeDTO> getExtratoByQrcode(String qrcode) {
+        return rep.findExtratoByQrcode(qrcode).stream().map(QrcodeDTO::create).collect(Collectors.toList());
     }
 
 

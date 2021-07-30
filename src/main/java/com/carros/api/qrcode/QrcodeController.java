@@ -39,9 +39,9 @@ public class QrcodeController {
                 ResponseEntity.ok(pontuacaos);
     }
 
-    @GetMapping("qrcode/{codigo}")
-    public ResponseEntity getExtratoByCodigo(@PathVariable("codigo") String codigo) {
-        List<QrcodeDTO> pontuacaos = service.getExtratoByCodigo(codigo);
+    @GetMapping("qrcode/{qrcode}")
+    public ResponseEntity getExtratoByQrcode(@PathVariable("qrcode") String qrcode) {
+        List<QrcodeDTO> pontuacaos = service.getExtratoByQrcode(qrcode);
         return pontuacaos.isEmpty() ?
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(pontuacaos);
