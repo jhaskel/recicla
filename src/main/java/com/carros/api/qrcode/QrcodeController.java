@@ -39,13 +39,7 @@ public class QrcodeController {
                 ResponseEntity.ok(pontuacaos);
     }
 
-    @GetMapping("qrcode/{qrcode}")
-    public ResponseEntity getExtratoByQrcode(@PathVariable("qrcode") String qrcode) {
-        List<QrcodeDTO> pontuacaos = service.getExtratoByQrcode(qrcode);
-        return pontuacaos.isEmpty() ?
-                ResponseEntity.noContent().build() :
-                ResponseEntity.ok(pontuacaos);
-    }
+
 
     @GetMapping("usuario/{usuario}/{tipo}")
     public ResponseEntity getCupomByUsuario(@PathVariable("usuario") Long usuario,@PathVariable("tipo") String tipo) {
@@ -54,6 +48,15 @@ public class QrcodeController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(pontuacaos);
     }
+
+    @GetMapping("qr/{qrcode}")
+    public ResponseEntity getQr(@PathVariable("qrcode") String qrcode) {
+        List<QrcodeDTO> pontuacaos = service.getQrcode(qrcode);
+        return pontuacaos.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(pontuacaos);
+    }
+
 
 
 

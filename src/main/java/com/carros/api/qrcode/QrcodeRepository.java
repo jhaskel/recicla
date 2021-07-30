@@ -15,8 +15,8 @@ public interface QrcodeRepository extends JpaRepository<Qrcode, Long> {
     List<Qrcode> findExtratoByIdloja(Long idloja);
 
 
-    @Query(value = "select * from qrcode  where qrcode = :codigo", nativeQuery = true)
-    List<Qrcode> findExtratoByQrcode(String qrcode);
+    @Query(value = "select * from qrcode  where qrcode = :qrcode", nativeQuery = true)
+    List<Qrcode> findQrcode(String qrcode);
 
     @Query(value = "select * from qrcode  where usuario = :usuario and tipo = :tipo ORDER BY date desc", nativeQuery = true)
     List<Qrcode> findCupomByUsuario(Long usuario, String tipo);

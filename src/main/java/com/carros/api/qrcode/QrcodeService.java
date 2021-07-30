@@ -34,17 +34,19 @@ public class QrcodeService {
 
 
 
-    public List<QrcodeDTO> getExtratoByQrcode(String qrcode) {
-        return rep.findExtratoByQrcode(qrcode).stream().map(QrcodeDTO::create).collect(Collectors.toList());
-    }
 
 
     public QrcodeDTO insert(Qrcode pontuacao) {
         Assert.isNull(pontuacao.getId(),"Não foi possível inserir o registro");
         return QrcodeDTO.create(rep.save(pontuacao));
     }
+
     public List<QrcodeDTO> getCupomByUsuario(Long usuario, String tipo) {
         return rep.findCupomByUsuario(usuario,tipo).stream().map(QrcodeDTO::create).collect(Collectors.toList());
+    }
+
+    public List<QrcodeDTO> getQrcode(String qrcode) {
+        return rep.findQrcode(qrcode).stream().map(QrcodeDTO::create).collect(Collectors.toList());
     }
 
     public QrcodeDTO update(Qrcode pontuacao, Long usuario) {
