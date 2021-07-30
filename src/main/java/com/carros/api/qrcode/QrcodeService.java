@@ -27,10 +27,6 @@ public class QrcodeService {
     }
 
 
-    public List<QrcodeDTO> getExtratoByUsuario(Long usuario) {
-        return rep.findExtratoByUsuario(usuario).stream().map(QrcodeDTO::create).collect(Collectors.toList());
-    }
-
 
     public List<QrcodeDTO> getExtratoByIdloja(Long idloja) {
         return rep.findExtratoByIdloja(idloja).stream().map(QrcodeDTO::create).collect(Collectors.toList());
@@ -59,8 +55,8 @@ public class QrcodeService {
         if(optional.isPresent()) {
             Qrcode db = optional.get();
             // Copiar as propriedades
-            db.setEcoins(pontuacao.getEcoins());
-            db.setPontos(pontuacao.getPontos());
+            db.setQrcode(pontuacao.getQrcode());
+            db.setValor(pontuacao.getValor());
             db.setAtivo(pontuacao.getAtivo());
 
        //     System.out.println("Pontuacao id " + db.getId());

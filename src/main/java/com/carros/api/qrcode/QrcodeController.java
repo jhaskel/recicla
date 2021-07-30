@@ -29,13 +29,7 @@ public class QrcodeController {
         return ResponseEntity.ok(pontuacao);
     }
 
-    @GetMapping("extrato/{usuario}")
-    public ResponseEntity getExtratoByUsuario(@PathVariable("usuario") Long usuario) {
-        List<QrcodeDTO> pontuacaos = service.getExtratoByUsuario(usuario);
-        return pontuacaos.isEmpty() ?
-                ResponseEntity.noContent().build() :
-                ResponseEntity.ok(pontuacaos);
-    }
+
 
     @GetMapping("loja/{idloja}")
     public ResponseEntity getExtratoByIdloja(@PathVariable("idloja") Long idloja) {
