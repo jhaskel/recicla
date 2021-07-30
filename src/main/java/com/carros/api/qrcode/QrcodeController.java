@@ -1,5 +1,7 @@
 package com.carros.api.qrcode;
 
+import com.carros.api.logistica.Logistica;
+import com.carros.api.logistica.LogisticaDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +11,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/cuponsmeus")
+@RequestMapping("/api/v1/qrcode")
 public class QrcodeController {
     @Autowired
     private QrcodeService service;
@@ -75,17 +77,18 @@ public class QrcodeController {
                 .buildAndExpand(id).toUri();
     }
 
-    @PutMapping("/{usuario}")
-    public ResponseEntity put(@PathVariable("usuario") Long usuario, @RequestBody Qrcode pontuacao) {
+    @PutMapping("/{id}")
+    public ResponseEntity put(@PathVariable("id") Long id, @RequestBody Qrcode pontuacao) {
 
-        pontuacao.setUsuario(usuario);
+        pontuacao.setIdloja(id);
 
-        QrcodeDTO c = service.update(pontuacao, usuario);
+        QrcodeDTO c = service.update(pontuacao, id);
 
         return c != null ?
                 ResponseEntity.ok(c) :
                 ResponseEntity.notFound().build();
     }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable("id") Long id) {

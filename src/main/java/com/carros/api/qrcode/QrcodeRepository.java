@@ -10,17 +10,17 @@ public interface QrcodeRepository extends JpaRepository<Qrcode, Long> {
 
 
 
-    @Query(value = "select * from cupom_meus  where usuario = :usuario ORDER BY hoje desc", nativeQuery = true)
+    @Query(value = "select * from qrcode  where usuario = :usuario ORDER BY hoje desc", nativeQuery = true)
     List<Qrcode> findExtratoByUsuario(Long usuario);
 
 
-    @Query(value = "select * from cupom_meus  where idloja = :idloja ORDER BY date desc", nativeQuery = true)
+    @Query(value = "select * from qrcode  where idloja = :idloja ORDER BY date desc", nativeQuery = true)
     List<Qrcode> findExtratoByIdloja(Long idloja);
 
 
-    @Query(value = "select * from cupom_meus  where codigo = :codigo", nativeQuery = true)
+    @Query(value = "select * from qrcode  where codigo = :codigo", nativeQuery = true)
     List<Qrcode> findExtratoByCodigo(String codigo);
 
-    @Query(value = "select * from cupom_meus  where usuario = :usuario and tipo = :tipo ORDER BY date desc", nativeQuery = true)
+    @Query(value = "select * from qrcode  where usuario = :usuario and tipo = :tipo ORDER BY date desc", nativeQuery = true)
     List<Qrcode> findCupomByUsuario(Long usuario, String tipo);
 }
