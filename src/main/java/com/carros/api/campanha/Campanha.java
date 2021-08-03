@@ -20,13 +20,10 @@ public class Campanha {
     private String image;
     private String tipo;
     private String address;
+    private String title;
     private Long ecoins;
     private Long pontos;
-    private String cor;
-    private String cor2;
-    private Double latitude;
-    private Double longitude;
-    private String date;
+
 
 
 }
