@@ -8,7 +8,7 @@ import org.modelmapper.ModelMapper;
 public class DicasDTO {
     private Long id;
     private Long cidade;
-    private Boolean ativo;
+
     private String content;
     private String image;
     private String title;
