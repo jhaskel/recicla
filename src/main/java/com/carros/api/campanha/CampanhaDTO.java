@@ -8,7 +8,7 @@ import org.modelmapper.ModelMapper;
 public class CampanhaDTO {
     private Long id;
     private Long cidade;
-    //private Boolean ativo;
+    private Boolean ativo;
     private String nome;
     private String content;
     private String image;
