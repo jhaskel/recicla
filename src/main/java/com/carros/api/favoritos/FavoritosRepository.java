@@ -11,6 +11,10 @@ interface FavoritosRepository extends JpaRepository<Favoritos, Long> {
     @Query(value = "SELECT * from favoritos where  ativo = true and usuario = :usuario and tipo = :tipo and idevento = :idevento",nativeQuery = true)
     List<Favoritos> findByCidade(Long usuario,String tipo,Long idevento);
 
+    @Query(value = "SELECT * from favoritos where   usuario = :usuario and tipo = :tipo",nativeQuery = true)
+    List<Favoritos> findUserTipo(Long usuario,String tipo);
+
+
 
     @Query(value = "SELECT * from favoritos where  ativo = true and usuario = :usuario and tipo = :tipo ",nativeQuery = true)
     List<Favoritos> findByIcone(Long usuario, String tipo);

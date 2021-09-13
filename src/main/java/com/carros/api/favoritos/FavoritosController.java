@@ -37,6 +37,14 @@ public class FavoritosController {
                 ResponseEntity.ok(coletando);
     }
 
+    @GetMapping("/userTipo/{usuario}/{tipo}")
+    public ResponseEntity getUser(@PathVariable("usuario") Long usuario,@PathVariable("tipo") String tipo) {
+        List<FavoritosDTO> coletando = service.getUserTipo(usuario,tipo);
+        return coletando.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(coletando);
+    }
+
     //verifica se tem favorito em postagem
     @GetMapping("/soma/{usuario}/{tipo}/{idevento}")
     public double getRe(@PathVariable("usuario") Long usuario,@PathVariable("tipo") String tipo,@PathVariable("idevento") Long idevento) {

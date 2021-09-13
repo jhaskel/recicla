@@ -66,6 +66,13 @@ public class FavoritosService {
     }
 
 
+
+    public List<FavoritosDTO> getUserTipo(Long usuario,String tipo) {
+        return rep.findUserTipo(usuario,tipo).stream().map(FavoritosDTO::create).collect(Collectors.toList());
+    }
+
+
+
     public List<FavoritosDTO> getRotasByIcone(Long usuario, String tipo) {
         return rep.findByIcone(usuario,tipo).stream().map(FavoritosDTO::create).collect(Collectors.toList());
     }

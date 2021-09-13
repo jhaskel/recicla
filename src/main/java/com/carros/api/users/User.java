@@ -27,7 +27,8 @@ public class User implements UserDetails {
     private String nascimento;
     private String genero;
     private String local;
-    private Long distancia;
+
+    private Long distancia ;
     private Double latitude;
     private Double longitude;
     private String tipo;
