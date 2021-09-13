@@ -11,6 +11,8 @@ public class Dica {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long cidade;
+    private Boolean ativo;
+
 
     private String content;
     private String image;
