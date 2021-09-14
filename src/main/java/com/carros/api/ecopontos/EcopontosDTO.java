@@ -12,6 +12,7 @@ public class EcopontosDTO {
     private String tipo;
     private String title;
     private String subtitle;
+    private String image;
     private String pode;
     private String nopode;
 
