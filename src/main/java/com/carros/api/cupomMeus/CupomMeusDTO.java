@@ -12,6 +12,7 @@ public class CupomMeusDTO {
     private Long ecoins;
     private Long pontos;
     private Long idloja;
+    private Long qtde;
     private String tipo;
     private String tipocupom;
     private String titulo;

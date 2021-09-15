@@ -20,6 +20,7 @@ public class CupomMeus {
     private Boolean ativo;
     private Long ecoins;
     private Long pontos;
+    private Long qtde;
     private Long idloja;
     private String tipo;
     private String tipocupom;
