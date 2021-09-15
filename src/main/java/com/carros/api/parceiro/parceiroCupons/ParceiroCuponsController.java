@@ -34,6 +34,14 @@ public class ParceiroCuponsController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(parceiros);
     }
+    @GetMapping("cidade/{cidade}")
+    public ResponseEntity getCidade(@PathVariable("cidade") Long cidade) {
+        List<ParceiroCuponsDTO> parceiros = service.getCidade(cidade);
+        return parceiros.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(parceiros);
+    }
+
 
 
     @PostMapping

@@ -10,4 +10,7 @@ public interface ParceiroCuponsRepository extends JpaRepository<ParceiroCupons, 
 
     @Query(value = "select * from parceiro_cupons  where  idloja = :idloja ORDER BY ativo desc, id desc", nativeQuery = true)
     List<ParceiroCupons>  findParceiroByIdloja(Long idloja);
+
+    @Query(value = "select * from parceiro_cupons  where  cidade = :cidade ORDER BY ativo desc, id desc", nativeQuery = true)
+    List<ParceiroCupons>  findCidade(Long cidade);
 }

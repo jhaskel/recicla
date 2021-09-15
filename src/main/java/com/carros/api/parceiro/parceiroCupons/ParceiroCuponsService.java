@@ -32,6 +32,11 @@ public class ParceiroCuponsService {
     }
 
 
+    public List<ParceiroCuponsDTO> getCidade(Long cidade) {
+        return rep.findCidade(cidade).stream().map(ParceiroCuponsDTO::create).collect(Collectors.toList());
+    }
+
+
 
 
 
