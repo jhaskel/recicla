@@ -35,6 +35,8 @@ public class CupomMeus {
     private String imagem;
     private Long valor;
     private Boolean isonline;
+    private String created;
+    private String modified;
 
 }
 

@@ -62,6 +62,7 @@ public class CupomMeusService {
             db.setEcoins(pontuacao.getEcoins());
             db.setPontos(pontuacao.getPontos());
             db.setAtivo(pontuacao.getAtivo());
+            db.setModified(pontuacao.getModified());
 
        //     System.out.println("Pontuacao id " + db.getId());
 
