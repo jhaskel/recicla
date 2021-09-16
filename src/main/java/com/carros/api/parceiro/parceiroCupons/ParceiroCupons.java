@@ -16,6 +16,7 @@ public class ParceiroCupons {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Boolean ativo;
+    private Boolean isonline;
     private Long idloja;
     private String titulo;
     private String patrocinador;

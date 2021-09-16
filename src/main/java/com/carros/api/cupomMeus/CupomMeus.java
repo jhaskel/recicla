@@ -34,6 +34,7 @@ public class CupomMeus {
     private String qrcode;
     private String imagem;
     private Long valor;
+    private Boolean isonline;
 
 }
 

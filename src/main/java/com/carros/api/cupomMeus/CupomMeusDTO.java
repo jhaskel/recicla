@@ -5,6 +5,7 @@ import org.modelmapper.ModelMapper;
 
 @Data
 public class CupomMeusDTO {
+
     private Long id;
     private Long usuario;
     private Long cidade;
@@ -25,6 +26,8 @@ public class CupomMeusDTO {
     private String qrcode;
     private String imagem;
     private Long valor;
+    private Boolean isonline;
+
 
     public static CupomMeusDTO create(CupomMeus cupons) {
         ModelMapper modelMapper = new ModelMapper();

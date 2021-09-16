@@ -22,6 +22,7 @@ public class ParceiroCuponsDTO {
     private String imagem;
     private String created;
     private Long cidade;
+    private Boolean isonline;
 
     public static ParceiroCuponsDTO create(ParceiroCupons parceiro) {
         ModelMapper modelMapper = new ModelMapper();
