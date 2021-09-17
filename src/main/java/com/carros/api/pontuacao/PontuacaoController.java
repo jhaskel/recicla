@@ -1,5 +1,6 @@
 package com.carros.api.pontuacao;
 
+import com.carros.api.pontua.PontuaDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
@@ -28,6 +29,8 @@ public class PontuacaoController {
     public double getRepMes(@PathVariable("usuario") Long usuario,@PathVariable("ano") Long ano,@PathVariable("mes") Long mes) {
         return service.getRepMes(usuario,ano,mes);
     }
+
+
 
     //retorna ranking de ecoins por ano
     @GetMapping("ecoins/{ano}")
@@ -77,6 +80,14 @@ public class PontuacaoController {
     @GetMapping("/pontos/usermes/{usuario}/{ano}/{mes}")
     public double getPontosMes(@PathVariable("usuario") Long usuario,@PathVariable("ano") Long ano,@PathVariable("mes") Long mes) {
         return service.getPontosMes(usuario,ano,mes);
+    }
+
+    @GetMapping("extrato/{usuario}")
+    public ResponseEntity getExtratoByUsuario(@PathVariable("usuario") Long usuario) {
+        List<PontuaDTO> pontuacaos = service.getExtratoByUsuario(usuario);
+        return pontuacaos.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(pontuacaos);
     }
 
 

@@ -1,6 +1,7 @@
 package com.carros.api.pontuacao;
 
 import com.carros.api.infra.exception.ObjectNotFoundException;
+import com.carros.api.pontua.PontuaDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -50,6 +51,9 @@ public class PontuacaoService {
 
     public void delete(Long id) {
         rep.deleteById(id);
+    }
+    public List<PontuaDTO> getExtratoByUsuario(Long usuario) {
+        return rep.findExtratoByUsuario(usuario).stream().map(PontuaDTO::create).collect(Collectors.toList());
     }
 
 

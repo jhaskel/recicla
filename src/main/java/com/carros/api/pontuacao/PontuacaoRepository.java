@@ -1,5 +1,6 @@
 package com.carros.api.pontuacao;
 
+import com.carros.api.pontua.Pontua;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -36,6 +37,8 @@ public interface PontuacaoRepository extends JpaRepository<Pontuacao, Long> {
          " where pon.ano = :ano and pon.semana = :semana group by pon.usuario order by total desc", nativeQuery = true)
  List<Pontuacao> findEcoinsBySemana(Long ano, Long semana);
 
+    @Query(value = "select * from pontuacao  where usuario = :usuario ORDER BY hoje desc", nativeQuery = true)
+    List<Pontua> findExtratoByUsuario(Long usuario);
 
 
 

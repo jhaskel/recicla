@@ -27,6 +27,8 @@ public class PontuaController {
         return ResponseEntity.ok(pontuacao);
     }
 
+
+
     @GetMapping("extrato/{usuario}")
     public ResponseEntity getExtratoByUsuario(@PathVariable("usuario") Long usuario) {
         List<PontuaDTO> pontuacaos = service.getExtratoByUsuario(usuario);
@@ -35,18 +37,11 @@ public class PontuaController {
                 ResponseEntity.ok(pontuacaos);
     }
 
-
-
-
-
     //verifica se o usuario ja fez brique no mes
     @GetMapping("/brique/{usuario}/{ano}/{mes}")
     public Long getPontosMes(@PathVariable("usuario") Long usuario,@PathVariable("ano") Long ano,@PathVariable("mes") Long mes) {
         return service.getPontosMes(usuario,ano,mes);
     }
-
-
-
 
 
     @PostMapping
