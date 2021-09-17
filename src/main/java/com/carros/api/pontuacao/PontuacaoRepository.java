@@ -37,7 +37,7 @@ public interface PontuacaoRepository extends JpaRepository<Pontuacao, Long> {
          " where pon.ano = :ano and pon.semana = :semana group by pon.usuario order by total desc", nativeQuery = true)
  List<Pontuacao> findEcoinsBySemana(Long ano, Long semana);
 
-    @Query(value = "select * from pontuacao  where usuario = :usuario ORDER BY hoje desc", nativeQuery = true)
+    @Query(value = "select * from pontuacao  where usuario = :usuario ORDER BY hoje ", nativeQuery = true)
     List<Pontua> findExtratoByUsuario(Long usuario);
 
 
