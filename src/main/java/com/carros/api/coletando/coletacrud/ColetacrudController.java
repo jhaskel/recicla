@@ -2,6 +2,7 @@ package com.carros.api.coletando.coletacrud;
 
 
 
+import com.carros.api.coletando.ColetandoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
@@ -34,6 +35,13 @@ public class ColetacrudController {
     @GetMapping("/cidade/{cidade}/{dia}")
     public ResponseEntity getColetandoByCidade(@PathVariable("cidade") Long cidade,@PathVariable("dia") String dia) {
         List<ColetacrudDTO> coletando = service.getColetacrudByCidade(cidade,dia);
+        return coletando.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(coletando);
+    }
+    @GetMapping("/usuarioDia/{usuario}/{dia}")
+    public ResponseEntity getUsuarioDia(@PathVariable("usuario") Long usuario,@PathVariable("dia") String dia) {
+        List<ColetacrudDTO> coletando = service.getUsuarioDia(usuario,dia);
         return coletando.isEmpty() ?
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(coletando);

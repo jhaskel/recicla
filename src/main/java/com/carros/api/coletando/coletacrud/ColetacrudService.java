@@ -1,5 +1,6 @@
 package com.carros.api.coletando.coletacrud;
 
+import com.carros.api.coletando.ColetandoDTO;
 import com.carros.api.infra.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,10 @@ public class ColetacrudService {
     public ColetacrudDTO getColetandoById(Long id) {
         Optional<Coletacrud> carro = rep.findById(id);
         return carro.map(ColetacrudDTO::create).orElseThrow(() -> new ObjectNotFoundException("Coletando não encontrado"));
+    }
+
+    public List<ColetacrudDTO> getUsuarioDia(Long usuario, String dia) {
+        return rep.findUsuarioDia(usuario,dia).stream().map(ColetacrudDTO::create).collect(Collectors.toList());
     }
 
     public ColetacrudDTO insert(Coletacrud carro) {
