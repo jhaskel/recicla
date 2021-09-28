@@ -14,6 +14,6 @@ interface ColetacrudRepository extends JpaRepository<Coletacrud, Long> {
     List<Coletacrud> findByCidade(Long cidade,String dia);
 
 
-    @Query(value = "SELECT * from coletando where ativo = 1 and  usuario = :usuario and dia = :dia order by id desc limit 1 ",nativeQuery = true)
+    @Query(value = "SELECT col.*, col.dia as nomerota, col.dia as nomeempresa, col.dia AS tiporota from coletando col where col.ativo = 1 and  col.usuario = :usuario and col.dia = :dia order by col.id desc limit 1 ",nativeQuery = true)
     List<Coletacrud> findUsuarioDia(Long usuario, String dia);
 }
