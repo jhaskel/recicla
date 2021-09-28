@@ -23,6 +23,7 @@ public class Caminhao {
     private String marca;
     private String modelo;
     private String motorista;
+    private Long idmotorista;
     private String placa;
 
 }

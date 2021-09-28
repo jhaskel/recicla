@@ -18,6 +18,7 @@ public class CaminhaoDTO {
     private String modelo;
     private String motorista;
     private String placa;
+    private Long idmotorista;
 
     public static CaminhaoDTO create(Caminhao dica) {
         ModelMapper modelMapper = new ModelMapper();
