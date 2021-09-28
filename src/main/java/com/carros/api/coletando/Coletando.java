@@ -23,6 +23,7 @@ public class Coletando {
     private String hora;
     private Long Usuario;
     private Double quant;
+    private String created;
 
 
 

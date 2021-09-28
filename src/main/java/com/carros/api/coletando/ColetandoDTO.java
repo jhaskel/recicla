@@ -16,6 +16,9 @@ public class ColetandoDTO {
     private Double longitude;
     private String hora;
     private Long Usuario;
+    private Double quant;
+    private String created;
+
 
 
 
