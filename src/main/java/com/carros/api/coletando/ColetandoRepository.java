@@ -15,6 +15,10 @@ interface ColetandoRepository extends JpaRepository<Coletando, Long> {
     List<Coletando> findByUsuario(Long usuario);
 
 
+    @Query(value = "SELECT * from coletando where ativo = 1 and  usuario = :usuario and dia = :dia order by id desc limit 1 ",nativeQuery = true)
+    List<Coletando> findUsuarioDia(Long usuario,String dia);
+
+
     @Query(value = "SELECT COUNT(*) as quant " +
             "FROM coletando col " +
             "INNER JOIN rotabairros rot ON rot.rota = col.idrota  " +

@@ -24,6 +24,8 @@ public class UserController {
         return ResponseEntity.ok(list);
     }
 
+
+
     @GetMapping("/info")
     public UserDTO userInfo(@AuthenticationPrincipal User user) {
 

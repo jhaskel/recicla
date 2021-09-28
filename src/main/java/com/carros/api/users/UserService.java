@@ -22,6 +22,7 @@ public class UserService {
     }
 
 
+
     public UserDTO insert(User user) {
         Assert.isNull(user.getId(),"Não foi possível inserir o registro");
         return UserDTO.create(rep.save(user));

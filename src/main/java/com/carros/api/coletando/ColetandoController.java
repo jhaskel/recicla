@@ -48,6 +48,14 @@ public class ColetandoController {
                 ResponseEntity.ok(coletando);
     }
 
+    @GetMapping("/usuarioDia/{usuario}/{dia}")
+    public ResponseEntity getUsuarioDia(@PathVariable("usuario") Long usuario,@PathVariable("dia") String dia) {
+        List<ColetandoDTO> coletando = service.getUsuarioDia(usuario,dia);
+        return coletando.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(coletando);
+    }
+
 
     @GetMapping("/soma/{cidade}/{bairro}/{dia}")
     public double VerificaRotaDia(@PathVariable("cidade") Long cidade,@PathVariable("bairro") Long bairro,@PathVariable("dia") String dia) {
