@@ -49,8 +49,6 @@ public class ColetandoController {
     }
 
 
-
-
     @GetMapping("/soma/{cidade}/{bairro}/{dia}")
     public double VerificaRotaDia(@PathVariable("cidade") Long cidade,@PathVariable("bairro") Long bairro,@PathVariable("dia") String dia) {
         return service.VerificaRotaDia(cidade,bairro,dia);

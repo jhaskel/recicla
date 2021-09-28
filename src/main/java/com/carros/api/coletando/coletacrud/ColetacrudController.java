@@ -39,6 +39,7 @@ public class ColetacrudController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(coletando);
     }
+
     @GetMapping("/usuarioDia/{usuario}/{dia}")
     public ResponseEntity getUsuarioDia(@PathVariable("usuario") Long usuario,@PathVariable("dia") String dia) {
         List<ColetacrudDTO> coletando = service.getUsuarioDia(usuario,dia);

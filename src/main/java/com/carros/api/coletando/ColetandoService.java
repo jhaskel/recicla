@@ -71,7 +71,4 @@ public class ColetandoService {
     public List<ColetandoDTO> getColetandoByUsuario(Long usuario) {
         return rep.findByUsuario(usuario).stream().map(ColetandoDTO::create).collect(Collectors.toList());
     }
-
-
-
 }
