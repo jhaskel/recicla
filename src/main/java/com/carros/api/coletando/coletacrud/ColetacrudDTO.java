@@ -14,6 +14,9 @@ public class ColetacrudDTO {
     private Long idrota;
     private Double latitude;
     private Double longitude;
+    private String hora;
+    private Long Usuario;
+    private String created;
     private String nomerota;//deletar campo no banco
     private String nomeempresa;//deletar campo no banco
     private String tiporota;//deletar campo no banco
