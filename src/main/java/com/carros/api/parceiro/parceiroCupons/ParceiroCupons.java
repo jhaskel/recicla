@@ -32,6 +32,7 @@ public class ParceiroCupons {
     private String imagem;
     private String created;
     private Long cidade;
+    private String nomeloja;
 
 
 }

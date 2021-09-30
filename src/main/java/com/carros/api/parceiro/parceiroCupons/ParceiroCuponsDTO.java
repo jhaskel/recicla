@@ -23,6 +23,7 @@ public class ParceiroCuponsDTO {
     private String created;
     private Long cidade;
     private Boolean isonline;
+    private String nomeloja;
 
     public static ParceiroCuponsDTO create(ParceiroCupons parceiro) {
         ModelMapper modelMapper = new ModelMapper();
