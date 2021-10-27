@@ -62,7 +62,7 @@ public class ColetacrudService {
     }
 
 
-    public List<ColetacrudDTO> getColetacrudByCidade(Long cidade,String dia) {
-        return rep.findByCidade(cidade,dia).stream().map(ColetacrudDTO::create).collect(Collectors.toList());
+    public List<ColetacrudDTO> getColetacrudByCidade(Long cidade,String dia,Long bairro) {
+        return rep.findByCidade(cidade,dia,bairro).stream().map(ColetacrudDTO::create).collect(Collectors.toList());
     }
 }

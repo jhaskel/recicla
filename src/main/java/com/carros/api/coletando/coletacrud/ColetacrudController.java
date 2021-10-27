@@ -32,9 +32,9 @@ public class ColetacrudController {
 
         return ResponseEntity.ok(coletando);
     }
-    @GetMapping("/cidade/{cidade}/{dia}")
-    public ResponseEntity getColetandoByCidade(@PathVariable("cidade") Long cidade,@PathVariable("dia") String dia) {
-        List<ColetacrudDTO> coletando = service.getColetacrudByCidade(cidade,dia);
+    @GetMapping("/cidade/{cidade}/{dia}/{bairro}")
+    public ResponseEntity getColetandoByCidade(@PathVariable("cidade") Long cidade,@PathVariable("dia") String dia,@PathVariable("idcaminhao") Long idcaminhao) {
+        List<ColetacrudDTO> coletando = service.getColetacrudByCidade(cidade,dia,idcaminhao);
         return coletando.isEmpty() ?
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(coletando);
