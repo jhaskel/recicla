@@ -46,6 +46,8 @@ public class ColetandoService {
             db.setLatitude(carro.getLatitude());
             db.setLongitude(carro.getLongitude());
             db.setHora(carro.getHora());
+            db.setStatus(carro.getStatus());
+            db.setPeso(carro.getPeso());
             System.out.println("Coletando id " + db.getId());
 
             // Atualiza o carro
