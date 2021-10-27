@@ -24,8 +24,6 @@ public class UsuarioDTO {
     private String tipo;
     private Long empresa;
     private String address;
-    private Long quantdicas;
-    private Long quantnoticias;
     private Boolean ativo;
     private Long regiao;
     private String logadoem;

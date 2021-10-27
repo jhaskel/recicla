@@ -39,8 +39,8 @@ public class PesoService {
         if(optional.isPresent()) {
             Peso db = optional.get();
             // Copiar as propriedades
-            db.setDia(carro.getDia());
-            db.setBairro(carro.getBairro());
+          //  db.setDia(carro.getDia());
+         //   db.setBairro(carro.getBairro());
             System.out.println("Trajeto id " + db.getId());
 
             // Atualiza o carro

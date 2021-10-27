@@ -34,8 +34,6 @@ public class UserDTO {
     private Long empresa;
     private String address;
     private List<String> roles;
-    private Long quantdicas;
-    private Long quantnoticias;
     private Boolean ativo;
     private Long regiao;
     private String logadoem;

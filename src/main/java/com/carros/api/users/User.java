@@ -27,15 +27,12 @@ public class User implements UserDetails {
     private String nascimento;
     private String genero;
     private String local;
-
     private Long distancia ;
     private Double latitude;
     private Double longitude;
     private String tipo;
     private Long empresa;
     private String address;
-    private Long quantdicas;
-    private Long quantnoticias;
     private Boolean ativo;
     private Long regiao;
     private String logadoem;
