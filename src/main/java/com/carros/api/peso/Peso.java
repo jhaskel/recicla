@@ -1,4 +1,4 @@
-package com.carros.api.coletando;
+package com.carros.api.peso;
 
 import lombok.Data;
 
@@ -9,26 +9,12 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Coletando {
+public class Peso {
     @Id //define chave primária
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long cidade;
-    private String dia;
-    private Long idcaminhao;
-    private Boolean ativo;
     private Long idrota;
-    private Double latitude;
-    private Double longitude;
-    private String hora;
-    private Long Usuario;
     private Long peso;
-    private String status;
-    private String created;
-
-
-
-
 
 
 
