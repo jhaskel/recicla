@@ -22,6 +22,8 @@ public class Coletacrud {
     private Double longitude;
     private String hora;
     private Long Usuario;
+    private Long peso;
+    private String status;
     private String created;
     private String nomerota;//deletar campo no banco
     private String nomeempresa;//deletar campo no banco
