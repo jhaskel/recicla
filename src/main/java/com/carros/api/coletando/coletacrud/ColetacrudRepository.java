@@ -10,7 +10,15 @@ import java.util.List;
 
 interface ColetacrudRepository extends JpaRepository<Coletacrud, Long> {
 
-    @Query(value = "SELECT col.* , rot.nome as nomerota, emp.nome as nomeempresa, rot.tipo AS tiporota FROM coletando col INNER JOIN rotas rot ON rot.id = col.idrota INNER JOIN caminhao cam ON cam.id = col.idcaminhao INNER JOIN empresa emp ON emp.id = cam.idempresa INNER JOIN rotabairros bai ON bai.id = col.idrota   WHERE col.cidade = :cidade  and col.dia = :dia AND bai.bairro=:bairro",nativeQuery = true)
+    @Query(value = "SELECT col.* , rot.nome as nomerota, emp.nome as nomeempresa, rot.tipo AS tiporota \n" +
+            "FROM coletando col \n" +
+            "INNER JOIN rotas rot ON rot.id = col.idrota \n" +
+            "INNER JOIN caminhao cam ON cam.id = col.idcaminhao \n" +
+            "INNER JOIN empresa emp ON emp.id = cam.idempresa \n" +
+            "INNER JOIN rotabairros rtb ON rtb.rota = rot.id\n" +
+            "INNER JOIN bairro bai ON bai.id = rtb.bairro \n" +
+            "WHERE bai.cidade = :cidade  and col.dia = :dia and bai.id=:bairro\n" +
+            "GROUP BY rot.id",nativeQuery = true)
     List<Coletacrud> findByCidade(Long cidade,String dia,Long bairro);
 
 
