@@ -18,7 +18,7 @@ interface ColetacrudRepository extends JpaRepository<Coletacrud, Long> {
             "INNER JOIN rotabairros rtb ON rtb.rota = rot.id\n" +
             "INNER JOIN bairro bai ON bai.id = rtb.bairro \n" +
             "WHERE bai.cidade = :cidade  and col.dia = :dia and bai.id=:bairro\n" +
-            "GROUP BY rot.id",nativeQuery = true)
+            "GROUP BY col.id ORDER BY col.id desc",nativeQuery = true)
     List<Coletacrud> findByCidade(Long cidade,String dia,Long bairro);
 
 
