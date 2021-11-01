@@ -13,10 +13,10 @@ import java.util.stream.Collectors;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserDTO {
     private Long id;
-    private String nome;
-    private String login;
-    private String senha;
     private String email;
+    private String login;
+    private String nome;
+    private String senha;
     private String urlFoto;
     private Long cidade;
     private Long bairro;
@@ -24,20 +24,19 @@ public class UserDTO {
     private String celular;
     private String nascimento;
     private String genero;
+    private Long distancia ;
     private String local;
-    private Long distancia;
     private Double latitude;
     private Double longitude;
-    // token jwt
-    private String token;
     private String tipo;
     private Long empresa;
     private String address;
-    private List<String> roles;
     private Boolean ativo;
     private Long regiao;
     private String logadoem;
-
+    // token jwt
+    private String token;
+    private List<String> roles;
 
     public static UserDTO create(User user) {
         ModelMapper modelMapper = new ModelMapper();

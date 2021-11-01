@@ -16,10 +16,10 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
-    private String login;
-    private String senha;
     private String email;
+    private String login;
+    private String nome;
+    private String senha;
     private String urlFoto;
     private Long cidade;
     private Long bairro;
@@ -27,8 +27,8 @@ public class Usuario {
     private String celular;
     private String nascimento;
     private String genero;
+    private Long distancia ;
     private String local;
-    private Long distancia;
     private Double latitude;
     private Double longitude;
     private String tipo;
