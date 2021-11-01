@@ -69,7 +69,6 @@ public class UsuarioService {
             db.setTipo(usuario.getTipo());
             db.setEmpresa(usuario.getEmpresa());
             db.setAddress(usuario.getAddress());
-
             db.setAtivo(usuario.getAtivo());
             db.setLogadoem(usuario.getLogadoem());
 
