@@ -25,7 +25,7 @@ public class Parceiro {
     private String celular;
     private String content;
     private String cor;
-    private String date;
+    private String created;
     private String homepage;
     private String image;
     private String image2;
