@@ -7,7 +7,7 @@ import org.modelmapper.ModelMapper;
 public class ParceiroDTO {
     private Long id;
     private String nome;
-    /*private String email;
+    private String email;
     private String address;
     private Boolean ativo;
     private Boolean isloja;
@@ -23,7 +23,7 @@ public class ParceiroDTO {
     private Double longitude;
     private String  slogan;
     private String telefone;
-    private String tipo;*/
+    private String tipo;
     public static ParceiroDTO create(Parceiro parceiro) {
         ModelMapper modelMapper = new ModelMapper();
         return modelMapper.map(parceiro, ParceiroDTO.class);

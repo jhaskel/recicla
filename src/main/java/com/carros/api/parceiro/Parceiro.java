@@ -17,12 +17,12 @@ public class Parceiro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    /*private String email;
+    private Long cidade;
+    private String email;
     private String address;
     private Boolean ativo;
     private Boolean isloja;
     private String celular;
-    private Long cidade;
     private String content;
     private String cor;
     private String date;
@@ -33,7 +33,6 @@ public class Parceiro {
     private Double longitude;
     private String  slogan;
     private String telefone;
-    private String tipo;*/
-
+    private String tipo;
 }
 
