@@ -17,7 +17,7 @@ public class Parceiro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Boolean ativo;
-    private Boolean is_loja;
+    private Boolean isLoja;
     private Long cidade;
     private String nome;
     private String content;

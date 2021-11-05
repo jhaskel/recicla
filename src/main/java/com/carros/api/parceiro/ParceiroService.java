@@ -37,9 +37,9 @@ public class ParceiroService {
     }
 
 
-    public ParceiroDTO insert(Parceiro pontuacao) {
-        Assert.isNull(pontuacao.getId(),"Não foi possível inserir o registro");
-        return ParceiroDTO.create(rep.save(pontuacao));
+    public ParceiroDTO insert(Parceiro parceiro) {
+        Assert.isNull(parceiro.getId(),"Não foi possível inserir o registro");
+        return ParceiroDTO.create(rep.save(parceiro));
     }
 
     public ParceiroDTO update(Parceiro pontuacao, Long usuario) {
@@ -51,7 +51,7 @@ public class ParceiroService {
             Parceiro db = optional.get();
             // Copiar as propriedades
             db.setAtivo(pontuacao.getAtivo());
-            db.setIs_loja(pontuacao.getIs_loja());
+            db.setContent(pontuacao.getContent());
 
             db.setContent(pontuacao.getContent());
        //     System.out.println("Pontuacao id " + db.getId());
