@@ -14,6 +14,6 @@ public interface ParceiroRepository extends JpaRepository<Parceiro, Long> {
     @Query(value = "select * from parceiro  where cidade = :cidade and ativo = true and is_loja = true ORDER BY id desc", nativeQuery = true)
     List<Parceiro>  findParceiroByCidade(Long cidade);
 
-    @Query(value = "select * from parceiro  where id = :id ", nativeQuery = true)
+    @Query(value = "select * from parceiro  where iduser = :id ", nativeQuery = true)
     List<Parceiro> findParceiroById(Long id);
 }
