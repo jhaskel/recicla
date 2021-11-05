@@ -18,6 +18,7 @@ public class Parceiro {
     private Long id;
     private Long iduser;
     private String nome;
+    private String fantasia;
     private String email;
     private String address;
     private Boolean ativo;
