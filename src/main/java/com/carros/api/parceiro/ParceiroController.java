@@ -1,5 +1,7 @@
 package com.carros.api.parceiro;
 
+import com.carros.api.usuario.Usuario;
+import com.carros.api.usuario.UsuarioDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -44,9 +46,7 @@ public class ParceiroController {
 
     @PostMapping
     public ResponseEntity post(@RequestBody Parceiro parceiro) {
-
         ParceiroDTO c = service.insert(parceiro);
-
         URI location = getUri(c.getId());
         return ResponseEntity.created(location).body(c);
     }

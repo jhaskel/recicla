@@ -14,7 +14,7 @@ import javax.persistence.Id;
 public class Parceiro {
 
     @Id
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Boolean ativo;
     private Boolean is_loja;
