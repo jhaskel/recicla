@@ -50,10 +50,10 @@ public class ParceiroService {
         if(optional.isPresent()) {
             Parceiro db = optional.get();
             // Copiar as propriedades
-            db.setAtivo(pontuacao.getAtivo());
-            db.setContent(pontuacao.getContent());
+           // db.setAtivo(pontuacao.getAtivo());
+          //  db.setContent(pontuacao.getContent());
 
-            db.setContent(pontuacao.getContent());
+           // db.setContent(pontuacao.getContent());
        //     System.out.println("Pontuacao id " + db.getId());
 
             // Atualiza a pontuacao
