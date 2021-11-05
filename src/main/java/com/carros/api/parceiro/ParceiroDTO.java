@@ -14,14 +14,12 @@ public class ParceiroDTO {
     private String celular;
     private Long cidade;
     private String content;
-    private String cor;
     private String created;
-    private String homepage;
     private String image;
     private String image2;
     private Double latitude;
     private Double longitude;
-    private String  slogan;
+    private String slogan;
     private String telefone;
     private String tipo;
     public static ParceiroDTO create(Parceiro parceiro) {
