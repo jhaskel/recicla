@@ -43,9 +43,9 @@ public class ParceiroController {
     }
 
     @PostMapping
-    public ResponseEntity post(@RequestBody Parceiro pontuacao) {
+    public ResponseEntity post(@RequestBody Parceiro parceiro) {
 
-        ParceiroDTO c = service.insert(pontuacao);
+        ParceiroDTO c = service.insert(parceiro);
 
         URI location = getUri(c.getId());
         return ResponseEntity.created(location).body(c);
