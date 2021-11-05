@@ -16,6 +16,7 @@ public class Parceiro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long iduser;
     private String nome;
     private String email;
     private String address;
@@ -30,7 +31,6 @@ public class Parceiro {
     private Double latitude;
     private Double longitude;
     private String slogan;
-    private String telefone;
     private String tipo;
 }
 
