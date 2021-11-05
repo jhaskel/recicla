@@ -14,7 +14,7 @@ import javax.persistence.Id;
 public class Parceiro {
 
     @Id
-
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
     private String email;
