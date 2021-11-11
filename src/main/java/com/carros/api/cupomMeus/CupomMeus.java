@@ -30,6 +30,7 @@ public class CupomMeus {
     private String horario;
     private String date;
     private String nomeloja;
+    private String nomeusuario;
     private String codigo;
     private String qrcode;
     private String imagem;
