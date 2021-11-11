@@ -36,6 +36,10 @@ public class ParceiroService {
         return rep.findParceiroById(id).stream().map(ParceiroDTO::create).collect(Collectors.toList());
     }
 
+    public List<ParceiroDTO> getIdLoja(Long id) {
+        return rep.findIdLoja(id).stream().map(ParceiroDTO::create).collect(Collectors.toList());
+    }
+
 
     public ParceiroDTO insert(Parceiro parceiro) {
         Assert.isNull(parceiro.getId(),"Não foi possível inserir o registro");

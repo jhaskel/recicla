@@ -44,6 +44,14 @@ public class ParceiroController {
                 ResponseEntity.ok(parceiros);
     }
 
+    @GetMapping("idLoja/{id}")
+    public ResponseEntity getIdLoja(@PathVariable("id") Long id) {
+        List<ParceiroDTO> parceiros = service.getIdLoja(id);
+        return parceiros.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(parceiros);
+    }
+
     @PostMapping
     public ResponseEntity post(@RequestBody Parceiro parceiro) {
         ParceiroDTO c = service.insert(parceiro);
