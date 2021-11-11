@@ -62,6 +62,17 @@ public class ParceiroCuponsService {
             db.setValor(pontuacao.getValor());
             db.setQuantidade(pontuacao.getQuantidade());
             db.setProdutos(pontuacao.getProdutos());
+            db.setImagem(pontuacao.getImagem());
+            db.setIsonline(pontuacao.getIsonline());
+            db.setPatrocinador(pontuacao.getPatrocinador());
+            db.setObservacao(pontuacao.getObservacao());
+            db.setDesconto(pontuacao.getDesconto());
+            db.setProdutos(pontuacao.getProdutos());
+            db.setTipo(pontuacao.getTipo());
+            db.setTipocupom(pontuacao.getTipocupom());
+            db.setNomeloja(pontuacao.getNomeloja());
+
+
        //     System.out.println("Pontuacao id " + db.getId());
 
             // Atualiza a pontuacao
