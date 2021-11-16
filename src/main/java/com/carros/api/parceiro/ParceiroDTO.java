@@ -7,7 +7,7 @@ import org.modelmapper.ModelMapper;
 public class ParceiroDTO {
     private Long id;
     private Long iduser;
-    private Long cnpj;
+    private String cnpj;
     private String nome;
     private String fantasia;
     private String email;
