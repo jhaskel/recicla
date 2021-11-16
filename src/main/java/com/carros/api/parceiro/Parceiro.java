@@ -29,10 +29,7 @@ public class Parceiro {
     private String content;
     private String created;
     private String image;
-    private String image2;
-    private Double latitude;
-    private Double longitude;
     private String slogan;
-    private String tipo;
+
 }
 
