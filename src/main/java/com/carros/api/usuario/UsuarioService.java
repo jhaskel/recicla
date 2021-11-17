@@ -52,11 +52,10 @@ public class UsuarioService {
             Usuario db = optional.get();
             // Copiar as propriedades
           //  db.setEmail(usuario.getEmail());
-            db.setLogin(usuario.getLogin());
+
             db.setNome(usuario.getNome());
             db.setSenha(usuario.getSenha());
             db.setUrlFoto(usuario.getUrlFoto());
-          //  db.setCidade(usuario.getCidade());
             db.setBairro(usuario.getBairro());
             db.setRua(usuario.getRua());
             db.setCelular(usuario.getCelular());
