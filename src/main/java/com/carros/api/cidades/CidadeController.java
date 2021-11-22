@@ -48,8 +48,17 @@ public class CidadeController {
 
         return c != null ?
                 ResponseEntity.ok(c) :
+
                 ResponseEntity.notFound().build();
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity delete(@PathVariable("id") Long id) {
+        service.delete(id);
+        return ResponseEntity.ok().build();
+    }
+
+
 
 
     private URI getUri(Long id) {
