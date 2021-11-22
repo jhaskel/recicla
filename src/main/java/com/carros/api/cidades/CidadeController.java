@@ -1,12 +1,11 @@
 package com.carros.api.cidades;
 
 
+import com.carros.api.usuario.Usuario;
+import com.carros.api.usuario.UsuarioDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -30,6 +29,26 @@ public class CidadeController {
         return cidades.isEmpty() ?
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(cidades);
+    }
+
+
+    @PostMapping
+    public ResponseEntity post(@RequestBody Cidade cidade) {
+        CidadeDTO c = service.insert(cidade);
+        URI location = getUri(c.getId());
+        return ResponseEntity.created(location).body(c);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity put(@PathVariable("id") Long id, @RequestBody Cidade cidade) {
+
+        cidade.setId(id);
+
+        CidadeDTO c = service.update(cidade, id);
+
+        return c != null ?
+                ResponseEntity.ok(c) :
+                ResponseEntity.notFound().build();
     }
 
 
